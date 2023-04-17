@@ -1,0 +1,29 @@
+Add more option: 
+        <div class="basic-opt opt">
+            <p>Benefit 1</p>
+            <p>Benefit 2</p>
+            <p>Benefit 3</p>
+            <p>Benefit 4</p>
+            <p>Benefit 5</p>
+            <p>Benefit 6</p>
+            <p>Benefit ...</p> <-- Like this
+        </div>
+
+* When a new option is added, go to the css file, find those lines:
+        .basic-opt > p:nth-child(4),
+        .basic-opt > p:nth-child(5),
+        .basic-opt > p:nth-child(6)  
+
+         and
+
+        .basic-opt > p:nth-child(4)::before,
+        .basic-opt > p:nth-child(5)::before,
+        .basic-opt > p:nth-child(6)::before  (look like this)
+
+         and add these:
+         
+        .basic-opt > p:nth-child(number of option)  
+
+                and 
+
+        .basic-opt > p:nth-child(number of option)::before
